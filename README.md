@@ -1,4 +1,4 @@
-# gemini.R <img alt='hexlogo' src = 'https://github.com/user-attachments/assets/331ba265-9852-4ca5-9c9a-ff19b9e494b3' width = 120 align = 'right'></img>
+# rgemma
 
 <!-- badges: start -->
 
@@ -9,29 +9,20 @@
 
 <!-- badges: end -->
 
-R package to use Google's gemini via API on R
+R package to use Google's gemma (and gemini) via API on R
+
+## Acknowledgment
+This package was modified from gemini.R [https://jhk0530.github.io/gemini.R/]. I thank the original author for the wonderfulk package.
+
+This is a customized fork, combining both gemma and gemini in generic functions. The original author of gemini.R has also added separate gemma_* functions for using gemma. So, this fork attempts to keep the functions simple, providing functions that work for both gemma and gemini.
 
 ## Installation
 
-#### From CRAN
-
-```r
-install.packages("gemini.R")
-```
-
-#### From [R-universe](https://r-universe.dev/search) (development version)
-
-```r
-install.packages("gemini.R",
-  repos = c("https://jhk0530.r-universe.dev", "https://cloud.r-project.org")
-)
-```
-
-#### From Github (development version)
+#### From Github
 
 ```r
 # install.packages("pak")
-pak::pak("jhk0530/gemini.R")
+pak::pak("wnarifin/rgemma")
 ```
 
 ## Usage
