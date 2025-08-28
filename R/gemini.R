@@ -28,13 +28,13 @@
 #' @seealso https://ai.google.dev/docs/gemini_api_overview#text_input
 #'
 
-gemini <- function(prompt, model = "2.0-flash", temperature = 1, maxOutputTokens = 8192, topK = 40, topP = 0.95, seed = 1234, timeout = 60) {
+gemini <- function(prompt, model = "gemini-2.0-flash", temperature = 1, maxOutputTokens = 8192, topK = 40, topP = 0.95, seed = 1234, timeout = 60) {
   # Validate all parameters at once
   if (!validate_params(prompt, model, temperature, topP, topK, seed, api_key = TRUE)) {
     return(NULL)
   }
 
-  model_query <- paste0("gemini-", model, ":generateContent")
+  model_query <- paste0(model, ":generateContent")
   url <- paste0("https://generativelanguage.googleapis.com/v1beta/models/", model_query)
   api_key <- Sys.getenv("GEMINI_API_KEY")
 

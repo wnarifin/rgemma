@@ -35,7 +35,7 @@
 #' @seealso https://ai.google.dev/docs/gemini_api_overview#text_image_input
 #'
 
-gemini_image <- function(image = NULL, prompt = "Explain this image", model = "2.0-flash",
+gemini_image <- function(image = NULL, prompt = "Explain this image", model = "gemini-2.0-flash",
                          temperature = 1, maxOutputTokens = 8192, topK = 40, topP = 0.95,
                          seed = 1234, type = "png") {
   # 1. validate_params 함수 사용
@@ -60,7 +60,7 @@ gemini_image <- function(image = NULL, prompt = "Explain this image", model = "2
     return(NULL)
   }
 
-  model_query <- paste0("gemini-", model, ":generateContent")
+  model_query <- paste0(model, ":generateContent")
   url <- paste0("https://generativelanguage.googleapis.com/v1beta/models/", model_query)
   api_key <- Sys.getenv("GEMINI_API_KEY")
   mime_type <- paste0("image/", type)
