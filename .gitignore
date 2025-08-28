@@ -20,6 +20,7 @@
 
 # RStudio files
 .Rproj.user/
+rgemma.Rproj
 
 # produced vignettes
 vignettes/*.html
