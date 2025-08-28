@@ -12,7 +12,7 @@
 R package to use Google's gemma (and gemini) via API on R
 
 ## Acknowledgment
-This package was modified from gemini.R [https://jhk0530.github.io/gemini.R/]. I thank the original author for the wonderfulk package.
+This package was modified from gemini.R [https://jhk0530.github.io/gemini.R/]. I thank the original author for the wonderful package.
 
 This is a customized fork, combining both gemma and gemini in generic functions. The original author of gemini.R has also added separate gemma_* functions for using gemma. So, this fork attempts to keep the functions simple, providing functions that work for both gemma and gemini.
 
